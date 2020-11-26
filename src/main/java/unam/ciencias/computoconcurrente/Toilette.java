@@ -18,7 +18,6 @@ public class Toilette {
         males = females = 0;
     }
 
-
     public void enterMale() throws InterruptedException {
     }
 
