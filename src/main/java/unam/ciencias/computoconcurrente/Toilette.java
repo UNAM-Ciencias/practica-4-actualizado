@@ -1,9 +1,5 @@
 package unam.ciencias.computoconcurrente;
 
-import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
-
 public class Toilette {
     private volatile long timesMalesEntered;
     private volatile long timesFemalesEntered;
@@ -14,17 +10,18 @@ public class Toilette {
     public Toilette() {
         this.timesMalesEntered = 0;
         this.timesFemalesEntered = 0;
-
         males = females = 0;
     }
 
     public void enterMale() throws InterruptedException {
+
     }
 
     public void leaveMale() {
     }
 
     public void enterFemale() throws InterruptedException {
+
     }
 
     public void leaveFemale() {

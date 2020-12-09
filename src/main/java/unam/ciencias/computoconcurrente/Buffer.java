@@ -2,21 +2,29 @@ package unam.ciencias.computoconcurrente;
 
 public interface Buffer<T> {
   /**
-   * Agrega un elemento al buffer;
+   * Regresa el tamaño del buffer.
+   * @return size
+   */
+  int size();
+
+  /**
+   * Agrega un elemento al buffer
    * se bloquea si esta lleno
    * @param item
    */
-  void put(T item);
+  void put(T item)  throws InterruptedException;
+
   /**
    * Elimina un elemento del buffer;
    * se bloquea si esta vacío.
    * @return  siguienteElemento
    */
-  T take();
+  T take()  throws InterruptedException;
+
   /**
    * Obtiene el numero de elementos
    * del buffer.
    * @return contedoDeObjetos
    */
-  int count();
+  int elements();
 }
